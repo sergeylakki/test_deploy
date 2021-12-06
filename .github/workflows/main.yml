@@ -16,4 +16,4 @@ jobs:
       - run: echo "$" > "$HOME/.ssh/key2"
       - run: chmod 600 "$HOME/.ssh/key2"
       # Deploy
-      - run: rsync -e "ssh -p 20022 -i $HOME/.ssh/key2 -o StrictHostKeyChecking=no" --archive --compress --delete . cr14678.timeweb.ru:/home/c/cr14678/django/
+      - run: rsync -e "ssh -p 20022 -i $HOME/.ssh/key2 -o StrictHostKeyChecking=no" --archive --compress --delete . 92.53.96.245:/home/c/cr14678/django/
