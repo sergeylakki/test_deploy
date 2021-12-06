@@ -13,7 +13,7 @@ jobs:
       # Setup key
       - run: set -eu
       - run: mkdir "$HOME/.ssh"
-      - run: echo "$" > "$HOME/.ssh/key"
-      - run: chmod 600 "$HOME/.ssh/key"
+      - run: echo "$" > "$HOME/.ssh/time-web"
+      - run: chmod 600 "$HOME/.ssh/time-web"
       # Deploy
-      - run: rsync -e "ssh -p 20022 -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete .  cr14678.timeweb.ru:/home/c/cr14678/django
+      - run: rsync -e "ssh -p 20022 -i $HOME/.ssh/time-web -o StrictHostKeyChecking=no" --archive --compress --delete .  cr14678.timeweb.ru:/home/c/cr14678/django
